@@ -1,0 +1,402 @@
+{
+  "profile": {
+    "firstName": "Prince Frejuste",
+    "lastName": "Kei",
+    "jobTitle": "Développeur Full Stack",
+    "tagline": "Passionné par l'automatisation et l'innovation, je transforme les processus complexes en solutions efficaces et performantes.",
+    "email": "frejusteprince@gmail.com",
+    "phone": "+225 07 206 360 59",
+    "githubUrl": "https://github.com/Frejuste-dev",
+    "linkedinUrl": "https://linkedin.com/in/keiprince",
+    "portfolioUrl": "https://votre-portfolio.com",
+    "photoUrl": "/images/profile.jpg"
+  },
+  "about": {
+    "paragraph1": "Développeur Full Stack passionné par la technologie et l'informatique, je me spécialise dans la résolution de problèmes complexes et la création de solutions innovantes. Mon expertise s'étend du développement web moderne à l'automatisation de processus métier et à la Data Science.",
+    "paragraph2": "Au-delà du code, je suis également passionné par la musique (je joue du piano) et le sport (football). J'aime constamment apprendre de nouvelles technologies et repousser les limites de ce qui est possible avec le développement logiciel.",
+    "paragraph3": "Actuellement chez SIBM, je développe des applications d'entreprise qui optimisent les processus et augmentent la productivité des équipes.",
+    "resumeUrl": "/documents/cv_kei_frejuste.pdf"
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "company": "SIBM",
+      "position": "Stagiaire École",
+      "period": "Mars 2024 - Août 2024",
+      "location": "Abidjan, Côte d'Ivoire",
+      "descriptionPoints": [
+        "Première immersion dans le monde professionnel du développement.",
+        "Découverte des processus métier et des besoins en automatisation.",
+        "Contribution au développement de solutions informatiques internes."
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "NodeJS",
+        "Express",
+        "MySQL"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "GROUPE CERIN",
+      "position": "Stagiaire en Perfectionnement",
+      "period": "Octobre 2024 - Juillet 2025",
+      "location": "Abidjan, Côte d'Ivoire",
+      "descriptionPoints": [
+        "Perfectionnement des compétences en développement Full Stack.",
+        "Participation à des projets de développement d'applications web.",
+        "Apprentissage des meilleures pratiques de développement et des méthodologies agiles."
+      ],
+      "technologies": [
+        "JavaScript",
+        "Python",
+        "PHP",
+        "ReactJS",
+        "NodeJS",
+        "Express",
+        "MySQL",
+        "TailwindCSS",
+        "Bootstrap"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "SIBM",
+      "position": "Stagiaire Informatique - Développeur d'Applications",
+      "period": "Juillet 2025 - Présent",
+      "location": "Abidjan, Côte d'Ivoire",
+      "descriptionPoints": [
+        "Développement et déploiement en production de 'Moulinette Inventaire' en 3 mois - Application complète d'automatisation des inventaires pour Sage X3.",
+        "Création d'une API RESTful avec Flask permettant le traitement automatisé de fichiers CSV et le calcul intelligent des écarts de stock.",
+        "Implémentation d'algorithmes de répartition FIFO/LIFO pour la gestion des stocks avec Pandas et NumPy.",
+        "Développement de solutions d'automatisation Excel pour la gestion des mouvements de stock et des consommations de matières premières.",
+        "Création d'un système de gestion de file d'attente pour le parc expo et d'un planning de production hebdomadaire automatisé."
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Pandas",
+        "NumPy",
+        "OpenPyXL",
+        "Excel VBA",
+        "REST API",
+        "CORS"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 101,
+      "title": "Moulinette Inventaire",
+      "description": "Application d'automatisation complète des traitements d'inventaire pour Sage X3. Traitement de fichiers CSV, calcul automatique des écarts de stock, répartition intelligente FIFO/LIFO, et API RESTful pour intégration. Actuellement en production chez SIBM avec une version 2 en réflexion.",
+      "imageUrl": "/images/moulinette_inventaire.webp",
+      "techStack": [
+        "Python",
+        "Flask",
+        "Pandas",
+        "NumPy",
+        "OpenPyXL",
+        "REST API",
+        "CORS",
+        "Logging"
+      ],
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "En production",
+      "highlights": [
+        "Déployé en production en 3 mois",
+        "Automatisation complète du processus d'inventaire",
+        "Algorithme intelligent de répartition des écarts"
+      ]
+    },
+    {
+      "id": 102,
+      "title": "Système de Gestion de File d'Attente",
+      "description": "Application pour optimiser la gestion des files d'attente au niveau du parc expo de SIBM, améliorant l'expérience client et l'efficacité opérationnelle.",
+      "imageUrl": "/images/queue_management.webp",
+      "techStack": [
+        "Python",
+        "Flask",
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "En développement"
+    },
+    {
+      "id": 103,
+      "title": "Automatisation Excel - Gestion des Stocks",
+      "description": "Solution d'automatisation Excel pour la gestion des mouvements de stock, permettant un suivi précis et des rapports automatisés.",
+      "imageUrl": "/images/excel_automation.webp",
+      "techStack": [
+        "Python",
+        "OpenPyXL",
+        "Pandas",
+        "Excel VBA"
+      ],
+      "githubUrl": null,
+      "liveUrl": null,
+      "status": "Déployé"
+    },
+    {
+      "id": 104,
+      "title": "KUMAJALA-AI",
+      "description": "Projet d'intelligence artificielle explorant les possibilités du machine learning et du traitement de données.",
+      "imageUrl": "/images/kumajala_ai.webp",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/KUMAJALA-AI",
+      "liveUrl": null,
+      "status": "Open source"
+    },
+    {
+      "id": 105,
+      "title": "Quantys-all",
+      "description": "Projet fullstack complet démontrant mes compétences en développement moderne avec une architecture robuste.",
+      "imageUrl": "/images/quantys.webp",
+      "techStack": [
+        "ReactJS",
+        "NodeJS",
+        "Express",
+        "MongoDB",
+        "TailwindCSS"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/Quantys-all",
+      "liveUrl": null,
+      "status": "Open source"
+    },
+    {
+      "id": 106,
+      "title": "PHPNX",
+      "description": "Framework PHP personnalisé conçu pour simplifier et accélérer le développement d'applications web.",
+      "imageUrl": "/images/phpnx.webp",
+      "techStack": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/phpnx",
+      "liveUrl": null,
+      "status": "Open source"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "name": "ReactJS",
+        "level": "Intermédiaire",
+        "icon": "react"
+      },
+      {
+        "name": "VueJS",
+        "level": "Intermédiaire",
+        "icon": "vue"
+      },
+      {
+        "name": "JavaScript (ES6+)",
+        "level": "Intermédiaire",
+        "icon": "javascript"
+      },
+      {
+        "name": "HTML5 & CSS3",
+        "level": "Intermédiaire",
+        "icon": "html5"
+      },
+      {
+        "name": "TailwindCSS",
+        "level": "Intermédiaire",
+        "icon": "tailwind"
+      },
+      {
+        "name": "Bootstrap",
+        "level": "Intermédiaire",
+        "icon": "bootstrap"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Python",
+        "level": "Intermédiaire",
+        "icon": "python"
+      },
+      {
+        "name": "Node.js",
+        "level": "Intermédiaire",
+        "icon": "nodejs"
+      },
+      {
+        "name": "Express.js",
+        "level": "Intermédiaire",
+        "icon": "express"
+      },
+      {
+        "name": "NestJS",
+        "level": "Intermédiaire",
+        "icon": "nestjs"
+      },
+      {
+        "name": "Flask",
+        "level": "Intermédiaire",
+        "icon": "flask"
+      },
+      {
+        "name": "FastAPI",
+        "level": "Intermédiaire",
+        "icon": "fastapi"
+      },
+      {
+        "name": "PHP",
+        "level": "Moyen",
+        "icon": "php"
+      }
+    ],
+    "dataScienceAI": [
+      {
+        "name": "Pandas",
+        "level": "Moyen",
+        "icon": "pandas"
+      },
+      {
+        "name": "NumPy",
+        "level": "Moyen",
+        "icon": "numpy"
+      },
+      {
+        "name": "Data Analysis",
+        "level": "Débutant",
+        "icon": "chart"
+      },
+      {
+        "name": "Machine Learning",
+        "level": "Débutant",
+        "icon": "brain"
+      }
+    ],
+    "databases": [
+      {
+        "name": "MySQL",
+        "level": "Intermédiaire",
+        "icon": "mysql"
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Moyen",
+        "icon": "postgresql"
+      },
+      {
+        "name": "MongoDB",
+        "level": "Moyen",
+        "icon": "mongodb"
+      },
+      {
+        "name": "SQL",
+        "level": "Moyen",
+        "icon": "database"
+      }
+    ],
+    "devOpsTools": [
+      {
+        "name": "Git / GitHub",
+        "level": "Moyen",
+        "icon": "git"
+      },
+      {
+        "name": "Docker",
+        "level": "Moyen",
+        "icon": "docker"
+      },
+      {
+        "name": "Excel Automation",
+        "level": "Moyen",
+        "icon": "excel"
+      },
+      {
+        "name": "REST APIs",
+        "level": "Moyen",
+        "icon": "api"
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Bacclauréat Scientifique | BAC D",
+      "issuer": "Lycée Moderne de SONGON",
+      "date": "2020",
+      "credentialUrl": "https://www.facebook.com/p/Lyc%C3%A9e-Moderne-de-Songon-100090126342804/",
+      "badgeUrl": "data:image/png;base64,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",
+      "link": "https://www.facebook.com/p/Lyc%C3%A9e-Moderne-de-Songon-100090126342804/"
+    },
+    {
+      "id": 2,
+      "title": "Brevet de Technicien Supérieur en Informatique Développeur d'Applications",
+      "issuer": "ESETEC ABIDJAN",
+      "date": "2023",
+      "credentialUrl": "https://educ.esetec.ci/",
+      "badgeUrl": "https://legrandfrere.africa/wp-content/uploads/294927046_100596249419176_5710830501575596211_n-768x768.png.webp",
+      "link": "https://educ.esetec.ci/"
+    },
+    {
+      "id": 3,
+      "title": "Python Developer",
+      "issuer": "W3Schools",
+      "date": "2024",
+      "credentialUrl": "https://www.w3schools.com/",
+      "badgeUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/W3Schools_logo.svg",
+      "link": "/documents/certification.pdf"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Musique",
+      "description": "Je joue du piano - ma deuxième passion après le développement",
+      "icon": "music"
+    },
+    {
+      "name": "Sport",
+      "description": "Football - j'aime jouer et suivre les matchs",
+      "icon": "football"
+    },
+    {
+      "name": "Intelligence Artificielle",
+      "description": "Passionné par l'IA et les possibilités du machine learning",
+      "icon": "ai"
+    },
+    {
+      "name": "Data Science",
+      "description": "Analyse de données et extraction d'insights pertinents",
+      "icon": "data"
+    },
+    {
+      "name": "Automatisation",
+      "description": "Optimisation des processus et gain de productivité",
+      "icon": "automation"
+    }
+  ],
+  "stats": {
+    "yearsOfExperience": "2+",
+    "projectsCompleted": "6+",
+    "projectsInProduction": "2",
+    "technologiesMastered": "15+"
+  },
+  "contact": {
+    "availability": "Disponible pour des opportunités",
+    "preferredContact": "email",
+    "responseTime": "24-48 heures",
+    "languages": [
+      "Français",
+      "Anglais (Intermédiaire)"
+    ]
+  }
+}
