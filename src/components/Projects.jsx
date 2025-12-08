@@ -1,195 +1,128 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaCheckCircle } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
-import TechBadge from './TechBadge';
 import ProjectFilters from './ProjectFilters';
+import TechBadge from './TechBadge';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import HolographicCard from './HolographicCard';
 
 const Projects = ({ projects }) => {
-    const [selectedTechs, setSelectedTechs] = useState([]);
-    const [selectedStatus, setSelectedStatus] = useState('all');
+    const [filter, setFilter] = useState('Tous');
+    const [visibleProjects, setVisibleProjects] = useState(6);
 
-    const statusColors = {
-        'En production': 'bg-green-500/20 text-green-400 border-green-500/30',
-        'Open source': 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-        'En développement': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-        'Déployé': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
-    };
+    const categories = ['Tous', ...new Set(projects.flatMap(p => p.techStack))].slice(0, 8); // Limit categories
 
-    // Extract all unique technologies and statuses
-    const allTechnologies = useMemo(() => {
-        const techSet = new Set();
-        projects.forEach(project => {
-            project.techStack.forEach(tech => techSet.add(tech));
-        });
-        return Array.from(techSet).sort();
-    }, [projects]);
+    const filteredProjects = filter === 'Tous'
+        ? projects
+        : projects.filter(p => p.techStack.includes(filter));
 
-    const allStatuses = [
-        { value: 'all', label: 'Tous' },
-        { value: 'En production', label: 'En production' },
-        { value: 'Open source', label: 'Open source' },
-        { value: 'En développement', label: 'En développement' },
-        { value: 'Déployé', label: 'Déployé' },
-    ];
-
-    // Filter projects based on selected filters
-    const filteredProjects = useMemo(() => {
-        return projects.filter(project => {
-            // Filter by status
-            const statusMatch = selectedStatus === 'all' || project.status === selectedStatus;
-
-            // Filter by technologies (AND logic - project must have all selected techs)
-            const techMatch = selectedTechs.length === 0 ||
-                selectedTechs.every(tech => project.techStack.includes(tech));
-
-            return statusMatch && techMatch;
-        });
-    }, [projects, selectedStatus, selectedTechs]);
-
-    const handleTechToggle = (tech) => {
-        setSelectedTechs(prev =>
-            prev.includes(tech)
-                ? prev.filter(t => t !== tech)
-                : [...prev, tech]
-        );
-    };
-
-    const handleStatusChange = (status) => {
-        setSelectedStatus(status);
-    };
-
-    const handleReset = () => {
-        setSelectedTechs([]);
-        setSelectedStatus('all');
+    const loadMore = () => {
+        setVisibleProjects(prev => prev + 3);
     };
 
     return (
-        <section id="projects" className="section-padding bg-gray-100 dark:bg-gray-900/50">
-            <div className="container-custom">
+        <section id="projects" className="section-padding relative">
+            <div className="container-custom relative z-10">
                 <SectionTitle
-                    title="Projets"
-                    subtitle="Découvrez mes réalisations et contributions"
+                    title="PROJECTS.LOG"
+                    subtitle="Exploration de mes créations numériques et solutions techniques"
                 />
 
                 <ProjectFilters
-                    allTechnologies={allTechnologies}
-                    allStatuses={allStatuses}
-                    selectedTechs={selectedTechs}
-                    selectedStatus={selectedStatus}
-                    onTechToggle={handleTechToggle}
-                    onStatusChange={handleStatusChange}
-                    onReset={handleReset}
-                    totalProjects={projects.length}
-                    filteredCount={filteredProjects.length}
+                    categories={categories}
+                    activeFilter={filter}
+                    onFilterChange={setFilter}
                 />
 
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={`${selectedStatus}-${selectedTechs.join(',')}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.3 }}
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    >
-                        {filteredProjects.length === 0 ? (
-                            <div className="col-span-full text-center py-12">
-                                <p className="text-gray-500 dark:text-gray-400 text-lg">
-                                    Aucun projet ne correspond aux filtres sélectionnés.
-                                </p>
-                            </div>
-                        ) : (
-                            filteredProjects.map((project, index) => (
-                                <motion.div
-                                    key={project.id}
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    whileHover={{ y: -5 }}
-                                    className="glass glass-hover rounded-2xl overflow-hidden group"
-                                >
-                                    {/* Project Image */}
-                                    <div className="relative h-48 bg-gradient-to-br from-primary-500/20 to-accent-500/20 overflow-hidden">
-                                        {project.imageUrl && (
-                                            <img
-                                                src={project.imageUrl}
-                                                alt={project.title}
-                                                className="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500"
-                                            />
-                                        )}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-50 dark:from-gray-950 to-transparent"></div>
+                <motion.div
+                    layout
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <AnimatePresence>
+                        {filteredProjects.slice(0, visibleProjects).map((project) => (
+                            <motion.div
+                                key={project.id}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <HolographicCard className="h-full flex flex-col">
+                                    <div className="relative h-48 overflow-hidden group">
+                                        <div className="absolute inset-0 bg-neon-cyan/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <img
+                                            src={project.imageUrl || "https://via.placeholder.com/600x400"}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
 
-                                        {/* Status Badge */}
-                                        <div className="absolute top-4 right-4">
-                                            <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${statusColors[project.status] || 'bg-gray-500/20 text-gray-400 border-gray-500/30'}`}>
-                                                {project.status}
-                                            </span>
+                                        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end z-20">
+                                            <div className="flex gap-3">
+                                                {project.githubUrl && (
+                                                    <a
+                                                        href={project.githubUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="p-2 bg-gray-900/80 backdrop-blur-sm rounded-full text-white hover:text-neon-cyan hover:shadow-[0_0_10px_rgba(0,243,255,0.5)] transition-all"
+                                                        title="Code Source"
+                                                    >
+                                                        <FaGithub />
+                                                    </a>
+                                                )}
+                                                {project.liveUrl && (
+                                                    <a
+                                                        href={project.liveUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="p-2 bg-gray-900/80 backdrop-blur-sm rounded-full text-white hover:text-neon-purple hover:shadow-[0_0_10px_rgba(188,19,254,0.5)] transition-all"
+                                                        title="Voir le site"
+                                                    >
+                                                        <FaExternalLinkAlt />
+                                                    </a>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
 
-                                    {/* Project Content */}
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gradient transition-all">
+                                    <div className="p-6 flex-grow flex flex-col">
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">
                                             {project.title}
                                         </h3>
-
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+                                        <p className="text-gray-400 mb-4 text-sm line-clamp-3 flex-grow">
                                             {project.description}
                                         </p>
 
-                                        {/* Highlights */}
-                                        {project.highlights && (
-                                            <ul className="mb-4 space-y-1">
-                                                {project.highlights.map((highlight, idx) => (
-                                                    <li key={idx} className="text-xs text-gray-500 dark:text-gray-400 flex items-start gap-2">
-                                                        <FaCheckCircle className="text-primary-400 mt-0.5 flex-shrink-0" />
-                                                        <span>{highlight}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-
-                                        {/* Tech Stack */}
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.techStack.slice(0, 4).map((tech) => (
-                                                <TechBadge key={tech} name={tech} />
+                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                            {project.techStack.slice(0, 4).map((tech, index) => (
+                                                <TechBadge key={index} tech={tech} />
                                             ))}
                                             {project.techStack.length > 4 && (
-                                                <span className="text-xs text-gray-500">+{project.techStack.length - 4}</span>
-                                            )}
-                                        </div>
-
-                                        {/* Links */}
-                                        <div className="flex gap-3">
-                                            {project.githubUrl && (
-                                                <a
-                                                    href={project.githubUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-white transition-colors"
-                                                >
-                                                    <FaGithub /> Code
-                                                </a>
-                                            )}
-                                            {project.liveUrl && (
-                                                <a
-                                                    href={project.liveUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-white transition-colors"
-                                                >
-                                                    <FaExternalLinkAlt /> Demo
-                                                </a>
+                                                <span className="text-xs text-gray-500 self-center">
+                                                    +{project.techStack.length - 4}
+                                                </span>
                                             )}
                                         </div>
                                     </div>
-                                </motion.div>
-                            ))
-                        )}
-                    </motion.div>
-                </AnimatePresence>
+                                </HolographicCard>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
+
+                {visibleProjects < filteredProjects.length && (
+                    <div className="mt-12 text-center">
+                        <motion.button
+                            onClick={loadMore}
+                            className="px-8 py-3 bg-transparent border border-neon-purple text-neon-purple font-medium rounded-none hover:bg-neon-purple/10 transition-colors relative overflow-hidden group"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <span className="relative z-10">LOAD_MORE_DATA()</span>
+                        </motion.button>
+                    </div>
+                )}
             </div>
         </section>
     );

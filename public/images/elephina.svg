@@ -1,0 +1,12 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad4)"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">Elephina PHP</text>
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Mini Framework</text>
+  <path d="M 350 400 L 450 400 L 450 500 L 350 500 Z M 370 420 L 430 420 M 370 450 L 430 450 M 370 480 L 430 480" stroke="white" stroke-width="3" fill="none" opacity="0.6"/>
+</svg>

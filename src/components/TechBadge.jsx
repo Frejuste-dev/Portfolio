@@ -1,10 +1,9 @@
 import React from 'react';
 
-const TechBadge = ({ name, icon }) => {
+const TechBadge = ({ tech }) => {
     return (
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-primary-500/10 to-accent-500/10 border border-primary-500/20 rounded-full text-sm font-medium text-gray-300 hover:border-primary-500/40 hover:text-white transition-all duration-300">
-            {icon && <span>{icon}</span>}
-            {name}
+        <span className="px-3 py-1 text-xs font-medium rounded-full bg-gray-800 text-neon-cyan border border-neon-cyan/30 hover:bg-neon-cyan/10 hover:border-neon-cyan hover:shadow-[0_0_10px_rgba(0,243,255,0.3)] transition-all cursor-default">
+            {tech}
         </span>
     );
 };

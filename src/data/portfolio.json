@@ -2,32 +2,46 @@
   "profile": {
     "firstName": "Prince Frejuste",
     "lastName": "Kei",
-    "jobTitle": "Développeur Full Stack",
+    "jobTitle": "Informaticien - Développeur Backend",
     "tagline": "Passionné par l'automatisation et l'innovation, je transforme les processus complexes en solutions efficaces et performantes.",
     "email": "frejusteprince@gmail.com",
-    "phone": "+225 07 206 360 59",
+    "phone": [
+      "+225 07 206 360 59",
+      "+225 05 469 305 47"
+    ],
     "githubUrl": "https://github.com/Frejuste-dev",
     "linkedinUrl": "https://linkedin.com/in/keiprince",
     "portfolioUrl": "https://votre-portfolio.com",
     "photoUrl": "/images/profile.jpg"
   },
   "about": {
-    "paragraph1": "Développeur Full Stack passionné par la technologie et l'informatique, je me spécialise dans la résolution de problèmes complexes et la création de solutions innovantes. Mon expertise s'étend du développement web moderne à l'automatisation de processus métier et à la Data Science.",
+    "paragraph1": "Informaticien - Développeur Backend passionné par la technologie et l'informatique, je me spécialise dans la résolution de problèmes complexes et la création de solutions innovantes. Mon expertise s'étend du développement web moderne à l'automatisation de processus métier et à la Data Science.",
     "paragraph2": "Au-delà du code, je suis également passionné par la musique (je joue du piano) et le sport (football). J'aime constamment apprendre de nouvelles technologies et repousser les limites de ce qui est possible avec le développement logiciel.",
     "paragraph3": "Actuellement chez SIBM, je développe des applications d'entreprise qui optimisent les processus et augmentent la productivité des équipes.",
     "resumeUrl": "/documents/cv_kei_frejuste.pdf"
   },
+  "soft_skills": [
+    "Esprit Analytique",
+    "Esprit d'équipe",
+    "Créativité & sens de l'innovation",
+    "Adaptabilité & flexibilité",
+    "Résolution de problème",
+    "Pensée critique"
+  ],
   "experiences": [
     {
       "id": 1,
       "company": "SIBM",
-      "position": "Stagiaire École",
+      "position": "Stagiaire Informatique - Développeur d'Applications",
       "period": "Mars 2024 - Août 2024",
       "location": "Abidjan, Côte d'Ivoire",
       "descriptionPoints": [
         "Première immersion dans le monde professionnel du développement.",
         "Découverte des processus métier et des besoins en automatisation.",
-        "Contribution au développement de solutions informatiques internes."
+        "Contribution au développement de solutions informatiques internes.",
+        "Conception d'une Application de Gestion des Performances des unité de production",
+        "Analyse des données de production avec Excel et visualisation sous forme de tableaux",
+        "Enregistrement et traitement de données dans Sage X3"
       ],
       "technologies": [
         "HTML",
@@ -41,24 +55,22 @@
     {
       "id": 2,
       "company": "GROUPE CERIN",
-      "position": "Stagiaire en Perfectionnement",
+      "position": "Stagiaire en Perfectionnement en Développement Full Stack",
       "period": "Octobre 2024 - Juillet 2025",
       "location": "Abidjan, Côte d'Ivoire",
       "descriptionPoints": [
         "Perfectionnement des compétences en développement Full Stack.",
         "Participation à des projets de développement d'applications web.",
-        "Apprentissage des meilleures pratiques de développement et des méthodologies agiles."
+        "Apprentissage des meilleures pratiques de développement et des méthodologies agiles.",
+        "Conception et développement d'une application de gestion de cantine scolaire avec fonctionnalités de commande, paiement mobile Wave."
       ],
       "technologies": [
         "JavaScript",
-        "Python",
-        "PHP",
-        "ReactJS",
+        "VueJS",
         "NodeJS",
         "Express",
         "MySQL",
-        "TailwindCSS",
-        "Bootstrap"
+        "TailwindCSS"
       ]
     },
     {
@@ -72,7 +84,12 @@
         "Création d'une API RESTful avec Flask permettant le traitement automatisé de fichiers CSV et le calcul intelligent des écarts de stock.",
         "Implémentation d'algorithmes de répartition FIFO/LIFO pour la gestion des stocks avec Pandas et NumPy.",
         "Développement de solutions d'automatisation Excel pour la gestion des mouvements de stock et des consommations de matières premières.",
-        "Création d'un système de gestion de file d'attente pour le parc expo et d'un planning de production hebdomadaire automatisé."
+        "Création d'un système de gestion de file d'attente pour le parc expo et d'un planning de production hebdomadaire automatisé.",
+        "Assistant support informatique à l'utilisateur",
+        "Conception et développement d'une application gestion et automatisation des inventaires de stock relative au ERP Sage X3",
+        "Automatisation des mouvements de stock (entrées, sorties, retours) avec Excel VBA",
+        "Coder un script d'automation et de création de code QR relatif aux factures en python",
+        "Conception et développement d'une application de gestion des heures supplémentaires"
       ],
       "technologies": [
         "Python",
@@ -82,7 +99,12 @@
         "OpenPyXL",
         "Excel VBA",
         "REST API",
-        "CORS"
+        "CORS",
+        "ReactJS",
+        "NodeJS",
+        "Express",
+        "MySQL",
+        "TailwindCSS"
       ]
     }
   ],
@@ -91,7 +113,7 @@
       "id": 101,
       "title": "Moulinette Inventaire",
       "description": "Application d'automatisation complète des traitements d'inventaire pour Sage X3. Traitement de fichiers CSV, calcul automatique des écarts de stock, répartition intelligente FIFO/LIFO, et API RESTful pour intégration. Actuellement en production chez SIBM avec une version 2 en réflexion.",
-      "imageUrl": "/images/moulinette_inventaire.webp",
+      "imageUrl": "/images/moulinette_inventaire.png",
       "techStack": [
         "Python",
         "Flask",
@@ -115,7 +137,7 @@
       "id": 102,
       "title": "Système de Gestion de File d'Attente",
       "description": "Application pour optimiser la gestion des files d'attente au niveau du parc expo de SIBM, améliorant l'expérience client et l'efficacité opérationnelle.",
-      "imageUrl": "/images/queue_management.webp",
+      "imageUrl": "/images/queue_management.png",
       "techStack": [
         "Python",
         "Flask",
@@ -131,7 +153,7 @@
       "id": 103,
       "title": "Automatisation Excel - Gestion des Stocks",
       "description": "Solution d'automatisation Excel pour la gestion des mouvements de stock, permettant un suivi précis et des rapports automatisés.",
-      "imageUrl": "/images/excel_automation.webp",
+      "imageUrl": "/images/excel_automation.png",
       "techStack": [
         "Python",
         "OpenPyXL",
@@ -146,7 +168,7 @@
       "id": 104,
       "title": "KUMAJALA-AI",
       "description": "Projet d'intelligence artificielle explorant les possibilités du machine learning et du traitement de données.",
-      "imageUrl": "/images/kumajala_ai.webp",
+      "imageUrl": "/images/kumajala_ai.png",
       "techStack": [
         "Python",
         "TensorFlow",
@@ -162,7 +184,7 @@
       "id": 105,
       "title": "Quantys-all",
       "description": "Projet fullstack complet démontrant mes compétences en développement moderne avec une architecture robuste.",
-      "imageUrl": "/images/quantys.webp",
+      "imageUrl": "/images/quantys.png",
       "techStack": [
         "ReactJS",
         "NodeJS",
@@ -178,7 +200,7 @@
       "id": 106,
       "title": "PHPNX",
       "description": "Framework PHP personnalisé conçu pour simplifier et accélérer le développement d'applications web.",
-      "imageUrl": "/images/phpnx.webp",
+      "imageUrl": "/images/phpnx.png",
       "techStack": [
         "PHP",
         "MySQL",
@@ -189,6 +211,161 @@
       "githubUrl": "https://github.com/Frejuste-dev/phpnx",
       "liveUrl": null,
       "status": "Open source"
+    },
+    {
+      "id": 107,
+      "title": "estock-api",
+      "description": "API RESTful de gestion de stock conçue pour des environnements industriels. Fournit des endpoints sécurisés pour la gestion des produits, des mouvements, des ajustements et des rapports.",
+      "imageUrl": "/images/estock_api.webp.png",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MySQL",
+        "JWT",
+        "REST API"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/estock-api",
+      "liveUrl": null,
+      "status": "Open source",
+      "highlights": [
+        "API complète pour la gestion des stocks",
+        "Architecture modulaire et scalable",
+        "Compatible avec frontends modernes"
+      ]
+    },
+    {
+      "id": 108,
+      "title": "api-cantine-cerin",
+      "description": "API centralisant la gestion des repas, des menus et des inscriptions pour le système de cantine CERIN. Développée pour simplifier les échanges entre mobile, web et administrateurs.",
+      "imageUrl": "/images/api_cantine.webp.png",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "githubUrl": "https://github.com/Frejuste26/api-cantine-cerin",
+      "liveUrl": null,
+      "status": "En développement",
+      "highlights": [
+        "Optimisation du flux d'inscription",
+        "Endpoints organisés par modules",
+        "Sécurisation des accès via JWT"
+      ]
+    },
+    {
+      "id": 109,
+      "title": "eShopping API",
+      "description": "API complète pour une plateforme e-commerce : gestion des produits, catégories, utilisateurs, commandes et paiements.",
+      "imageUrl": "/images/eshopping_api.webp.png",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Bcrypt",
+        "JWT"
+      ],
+      "githubUrl": "https://github.com/Frejuste26/eShopping-api",
+      "liveUrl": null,
+      "status": "Open source",
+      "highlights": [
+        "Gestion complète du cycle e-commerce",
+        "Structure modulaire",
+        "Middleware avancé pour la sécurité"
+      ]
+    },
+    {
+      "id": 110,
+      "title": "peerfood-nodejs",
+      "description": "Backend Node.js pour la gestion de commandes alimentaires. Contient un système d’authentification, de gestion produits et livraison.",
+      "imageUrl": "/images/peerfood.webp.png",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "REST API"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/peerfood-nodejs",
+      "liveUrl": null,
+      "status": "Open source"
+    },
+    {
+      "id": 111,
+      "title": "FastFix",
+      "description": "Application backend permettant la gestion d'interventions techniques, de tickets et de techniciens. Conçue pour des PME de maintenance.",
+      "imageUrl": "/images/fastfix.svg",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/fastfix",
+      "liveUrl": null,
+      "status": "En développement"
+    },
+    {
+      "id": 112,
+      "title": "Portfolio FrejusDev",
+      "description": "Portfolio personnel moderne développé pour présenter mes projets, compétences et expériences. Design responsive et optimisé.",
+      "imageUrl": "/images/portfolio.svg",
+      "techStack": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "JSON"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/frejusdev-portfolio",
+      "liveUrl": null,
+      "status": "Open source"
+    },
+    {
+      "id": 113,
+      "title": "Quantys UI",
+      "description": "Version frontend du projet Quantys. Interface utilisateur moderne construite pour offrir une navigation fluide et une expérience propre.",
+      "imageUrl": "/images/quantys_ui.svg",
+      "techStack": [
+        "Vue.js",
+        "TailwindCSS",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/Frejuste-dev/quantys",
+      "liveUrl": null,
+      "status": "Open source"
+    },
+    {
+      "id": 114,
+      "title": "Elephina PHP",
+      "description": "Mini-framework PHP minimaliste créé pour accélérer le développement d'applications web. Léger, rapide, et conçu pour l’apprentissage.",
+      "imageUrl": "/images/elephina.svg",
+      "techStack": [
+        "PHP",
+        "MySQL",
+        "HTML5"
+      ],
+      "githubUrl": "https://github.com/Frejuste26/elephina-php",
+      "liveUrl": null,
+      "status": "Open source",
+      "highlights": [
+        "Structure MVC légère",
+        "Routeur intégré",
+        "Extensible et facile à comprendre"
+      ]
+    },
+    {
+      "id": 115,
+      "title": "FrankenPHP (Fork / Expérimentation)",
+      "description": "Projet d’expérimentation autour de FrankenPHP, un serveur PHP moderne. Utilisé pour tester des optimisations et architectures backend.",
+      "imageUrl": "/images/frankenphp.svg",
+      "techStack": [
+        "PHP",
+        "Caddy",
+        "FrankenPHP"
+      ],
+      "githubUrl": "https://github.com/Frejuste26/frankenphp",
+      "liveUrl": null,
+      "status": "Expérimentation"
     }
   ],
   "skills": {
@@ -317,7 +494,7 @@
         "icon": "docker"
       },
       {
-        "name": "Excel Automation",
+        "name": "Excel Automation VBA",
         "level": "Moyen",
         "icon": "excel"
       },
@@ -325,6 +502,26 @@
         "name": "REST APIs",
         "level": "Moyen",
         "icon": "api"
+      },
+      {
+        "name": "MVC",
+        "level": "Moyen",
+        "icon": "model"
+      },
+      {
+        "name": "SCRUM AGILE",
+        "level": "Moyen",
+        "icon": "scrum"
+      },
+      {
+        "name": "Notion",
+        "level": "Moyen",
+        "icon": "notion"
+      },
+      {
+        "name": "Photoshop",
+        "level": "Moyen",
+        "icon": "photoshop"
       }
     ]
   },
@@ -394,9 +591,9 @@
     "availability": "Disponible pour des opportunités",
     "preferredContact": "email",
     "responseTime": "24-48 heures",
-    "languages": [
-      "Français",
-      "Anglais (Intermédiaire)"
-    ]
+    "langues": {
+      "francais": "Courant",
+      "anglais": "Lecture/écriture technique"
+    }
   }
 }
