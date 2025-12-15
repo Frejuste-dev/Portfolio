@@ -135,19 +135,19 @@
   }
 
   .glass {
-    @apply bg-gray-900/60 backdrop-blur-xl border border-white/10 shadow-[0_0_15px_rgba(0, 243, 255, 0.1)];
+    @apply bg-gray-900/60 backdrop-blur-xl border border-white/10 shadow-[0_0_15px_rgba(0,243,255,0.1)];
   }
 
   .glass-hover {
-    @apply hover:bg-gray-800/80 hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(0, 243, 255, 0.3)] transition-all duration-300;
+    @apply hover:bg-gray-800/80 hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(0,243,255,0.3)] transition-all duration-300;
   }
 
   .neon-border {
-    @apply border border-neon-cyan/30 shadow-[0_0_10px_rgba(0, 243, 255, 0.2)];
+    @apply border border-neon-cyan/30 shadow-[0_0_10px_rgba(0,243,255,0.2)];
   }
 
   .neon-text {
-    @apply text-neon-cyan drop-shadow-[0_0_5px_rgba(0, 243, 255, 0.8)];
+    @apply text-neon-cyan drop-shadow-[0_0_5px_rgba(0,243,255,0.8)];
   }
 
   .section-padding {

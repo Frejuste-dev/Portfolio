@@ -30,15 +30,22 @@ const Contact = ({ contact, profile }) => {
         e.preventDefault();
         setStatus('sending');
 
-        // Replace with your actual EmailJS service ID, template ID, and public key
-        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-
-        // Simulation for now
-        setTimeout(() => {
-            setStatus('success');
-            form.current.reset();
-            setTimeout(() => setStatus(''), 5000);
-        }, 1500);
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+            .then((result) => {
+                console.log(result.text);
+                setStatus('success');
+                form.current.reset();
+                setTimeout(() => setStatus(''), 5000);
+            }, (error) => {
+                console.log(error.text);
+                setStatus('error');
+                setTimeout(() => setStatus(''), 5000);
+            });
     };
 
     return (

@@ -22,7 +22,18 @@ import portfolioData from './data/portfolio.json';
 function App() {
   const [darkMode, setDarkMode] = useState(true); // Default to dark mode for cyberpunk theme
   const [mousePos, setMousePos] = useState([0, 0]);
+  const [particleCount, setParticleCount] = useState(1500);
   const mouseRef = React.useRef([0, 0]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setParticleCount(window.innerWidth < 768 ? 500 : 1500);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // Force dark mode for futuristic theme
@@ -53,7 +64,7 @@ function App() {
         <div className="fixed inset-0 z-0 pointer-events-none">
           <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
             <Background3D />
-            <ParticleField count={1500} mouse={mouseRef} />
+            <ParticleField count={particleCount} mouse={mouseRef} />
             <GridBackground />
           </Canvas>
         </div>
